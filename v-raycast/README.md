@@ -1,7 +1,7 @@
 # RayCastCoords
 
 
-Get information about objects around using raycast
+Get information about entities around using raycast
 
 How to use:
 
