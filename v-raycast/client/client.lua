@@ -1,6 +1,3 @@
-
-local QBCore = exports['qb-core']:GetCoreObject()
-
 local screenX = 0.75
 local screenY = 0.5
 local enabled = false
@@ -18,7 +15,7 @@ RegisterNetEvent('v-raycast:client:toggle')
 AddEventHandler('v-raycast:client:toggle', function()
     enabled = not enabled
     local status = enabled and "activated" or "deactivated"
-    QBCore.Functions.Notify("RayCast Coords " .. status, enabled and "success" or "error")
+    ShowNotification("RayCast Coords " .. status)
 end)
 
 function RotationToDirection(rotation)
@@ -133,6 +130,12 @@ function Draw2DText(x, y, text)
     SetTextCentre(1)
     AddTextComponentString(text)
     DrawText(x, y)
+end
+
+function ShowNotification(msg)
+	SetNotificationTextEntry("STRING")
+	AddTextComponentString(msg)
+	DrawNotification(0,1)
 end
 
 
