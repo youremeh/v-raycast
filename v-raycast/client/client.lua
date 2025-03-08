@@ -141,7 +141,7 @@ end
 
 Citizen.CreateThread(function()
     while true do
-        local waitTime = enabled and 5 or 1000
+        local waitTime = enabled and 3 or 1000
         if enabled then
             local hit, endCoords, entity = RayCastGamePlayCamera(1000.0)
             local startCoords = GetEntityCoords(PlayerPedId())
